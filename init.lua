@@ -4,6 +4,7 @@ hs.window.animationDuration = 0
 
 -- Use the standardized config location, if present
 custom_config = hs.fs.pathToAbsolute(os.getenv("HOME") .. '/.config/hammerspoon/private/config.lua')
+custom_loader = hs.fs.pathToAbsolute(os.getenv("HOME") .. '/.config/hammerspoon/myloader.lua')
 if custom_config then
     print("Loading custom config")
     dofile( os.getenv("HOME") .. "/.config/hammerspoon/private/config.lua")
@@ -11,6 +12,10 @@ if custom_config then
     if privatepath then
         hs.alert("You have config in both .config/hammerspoon and .hammerspoon/private.\nThe .config/hammerspoon one will be used.")
     end
+    -- add path of custom spoons
+    local custom_spoons_path = os.getenv("HOME") .. '/.config/hammerspoon/Spoons/?.spoon/init.lua'
+    package.path = package.path .. ';' .. custom_spoons_path
+    print("custom_spoons_path set" .. custom_spoons_path)
 else
     -- otherwise fallback to 'classic' location.
     if not privatepath then
@@ -181,7 +186,7 @@ if spoon.ClipShow then
 end
 
 ----------------------------------------------------------------------------------------------------
--- Register HSaria2
+-- -- Register HSaria2
 if spoon.HSaria2 then
     -- First we need to connect to aria2 rpc host
     hsaria2_host = hsaria2_host or "http://localhost:6800/jsonrpc"
@@ -368,6 +373,10 @@ if string.len(hsconsole_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hsconsole_keys[1], hsconsole_keys[2], "Toggle Hammerspoon Console", function() hs.toggleConsole() end)
 end
 
+if custom_loader then
+    print("FUCK custom_loader loaded")
+    dofile(custom_loader)
+end
 ----------------------------------------------------------------------------------------------------
 -- Finally we initialize ModalMgr supervisor
 spoon.ModalMgr.supervisor:enter()
