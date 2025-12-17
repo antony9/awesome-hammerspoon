@@ -3,11 +3,13 @@ hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
 -- Use the standardized config location, if present
-custom_config = hs.fs.pathToAbsolute(os.getenv("HOME") .. '/.config/hammerspoon/private/config.lua')
-custom_loader = hs.fs.pathToAbsolute(os.getenv("HOME") .. '/.config/hammerspoon/myloader.lua')
+-- custom_config = hs.fs.pathToAbsolute(hs.configdir .. '/private/config.lua')
+custom_loader = hs.fs.pathToAbsolute(hs.configdir .. '/private/myloader.lua')
+
+-- if部分可以删掉
 if custom_config then
     print("Loading custom config")
-    dofile( os.getenv("HOME") .. "/.config/hammerspoon/private/config.lua")
+    dofile( os.getenv("HOME") .. "/.hammerspoon/private/config.lua")
     privatepath = hs.fs.pathToAbsolute(hs.configdir .. '/private/config.lua')
     if privatepath then
         hs.alert("You have config in both .config/hammerspoon and .hammerspoon/private.\nThe .config/hammerspoon one will be used.")
