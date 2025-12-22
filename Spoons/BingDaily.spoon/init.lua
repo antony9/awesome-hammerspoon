@@ -15,8 +15,8 @@ obj.author = "ashfinal <ashfinal@gmail.com>, updated by limoyun"
 obj.homepage = "https://github.com/Hammerspoon/Spoons"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
 
--- Configuration for 6 desktop spaces
-obj.desktop_spaces = {1, 2, 4, 5, 6, 7}  -- Based on AnthonyWinManagerSpoon configuration
+-- Configuration for 7 desktop spaces
+obj.desktop_spaces = {1, 2, 3, 4, 5, 6, 7}  -- Updated to include 7 spaces in rotation
 obj.current_space_index = 1  -- Start with the first space
 obj.wallpaper_dir = os.getenv("HOME") .. "/.wallpaper/bing_daily/"
 obj.space_wallpaper_map = {}  -- Track wallpaper for each space

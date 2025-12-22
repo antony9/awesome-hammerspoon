@@ -11,8 +11,8 @@
     ],
     "Variable" : [
       {
-        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7})",
-        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7}).",
+        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 3, 4, 5, 6, 7})",
+        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 3, 4, 5, 6, 7}).",
         "fieldtype" : "Field",
         "name" : "desktop_spaces",
         "signature" : "BingDaily.desktop_spaces",
@@ -30,7 +30,7 @@
     "stripped_doc" : [
 
     ],
-    "desc" : "Use Bing daily picture as your wallpaper, automatically. Updated to rotate wallpapers sequentially across 6 desktop spaces.",
+    "desc" : "Use Bing daily picture as your wallpaper, automatically. Updated to rotate wallpapers sequentially across 7 desktop spaces.",
     "type" : "Module",
     "Deprecated" : [
 
@@ -38,11 +38,11 @@
     "Constructor" : [
 
     ],
-    "doc" : "Use Bing daily picture as your wallpaper, automatically. Updated to rotate wallpapers sequentially across 6 desktop spaces.\n\nDownload: [https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/BingDaily.spoon.zip](https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/BingDaily.spoon.zip)",
+    "doc" : "Use Bing daily picture as your wallpaper, automatically. Updated to rotate wallpapers sequentially across 7 desktop spaces.\n\nDownload: [https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/BingDaily.spoon.zip](https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/BingDaily.spoon.zip)",
     "items" : [
       {
-        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7})",
-        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7}).",
+        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 3, 4, 5, 6, 7})",
+        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 3, 4, 5, 6, 7}).",
         "fieldtype" : "Field",
         "name" : "desktop_spaces",
         "signature" : "BingDaily.desktop_spaces",
@@ -107,8 +107,8 @@
     ],
     "Field" : [
       {
-        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7})",
-        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7}).",
+        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 3, 4, 5, 6, 7})",
+        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 3, 4, 5, 6, 7}).",
         "fieldtype" : "Field",
         "name" : "desktop_spaces",
         "signature" : "BingDaily.desktop_spaces",
