@@ -10,12 +10,27 @@
 
     ],
     "Variable" : [
-
+      {
+        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7})",
+        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7}).",
+        "fieldtype" : "Field",
+        "name" : "desktop_spaces",
+        "signature" : "BingDaily.desktop_spaces",
+        "type" : "Variable"
+      },
+      {
+        "desc" : "Current index in the rotation sequence (1-based)",
+        "doc" : "Current index in the rotation sequence (1-based).",
+        "fieldtype" : "Field",
+        "name" : "current_space_index",
+        "signature" : "BingDaily.current_space_index",
+        "type" : "Variable"
+      }
     ],
     "stripped_doc" : [
 
     ],
-    "desc" : "Use Bing daily picture as your wallpaper, automatically.",
+    "desc" : "Use Bing daily picture as your wallpaper, automatically. Updated to rotate wallpapers sequentially across 6 desktop spaces.",
     "type" : "Module",
     "Deprecated" : [
 
@@ -23,18 +38,90 @@
     "Constructor" : [
 
     ],
-    "doc" : "Use Bing daily picture as your wallpaper, automatically.\n\nDownload: [https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/BingDaily.spoon.zip](https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/BingDaily.spoon.zip)",
+    "doc" : "Use Bing daily picture as your wallpaper, automatically. Updated to rotate wallpapers sequentially across 6 desktop spaces.\n\nDownload: [https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/BingDaily.spoon.zip](https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/BingDaily.spoon.zip)",
     "items" : [
-
+      {
+        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7})",
+        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7}).",
+        "fieldtype" : "Field",
+        "name" : "desktop_spaces",
+        "signature" : "BingDaily.desktop_spaces",
+        "type" : "Variable"
+      },
+      {
+        "desc" : "Current index in the rotation sequence (1-based)",
+        "doc" : "Current index in the rotation sequence (1-based).",
+        "fieldtype" : "Field",
+        "name" : "current_space_index",
+        "signature" : "BingDaily.current_space_index",
+        "type" : "Variable"
+      }
     ],
     "Command" : [
 
     ],
     "Method" : [
-
+      {
+        "desc" : "Initialize the BingDaily spoon with space rotation functionality",
+        "doc" : "Initialize the BingDaily spoon with space rotation functionality\n\nParameters:\n * None",
+        "name" : "init",
+        "signature" : "BingDaily:init()",
+        "parameters" : [
+          " * None"
+        ],
+        "type" : "Method"
+      },
+      {
+        "desc" : "Manually trigger wallpaper update for current space in rotation",
+        "doc" : "Manually trigger wallpaper update for current space in rotation\n\nParameters:\n * None",
+        "name" : "updateCurrentSpace",
+        "signature" : "BingDaily:updateCurrentSpace()",
+        "parameters" : [
+          " * None"
+        ],
+        "type" : "Method"
+      },
+      {
+        "desc" : "Get current space information in the rotation",
+        "doc" : "Get current space information in the rotation\n\nParameters:\n * None\n\nReturns:\n * A table containing: index, id, total_spaces, all_spaces",
+        "name" : "getCurrentSpaceInfo",
+        "signature" : "BingDaily:getCurrentSpaceInfo()",
+        "parameters" : [
+          " * None"
+        ],
+        "returns" : [
+          " * A table containing: index, id, total_spaces, all_spaces"
+        ],
+        "type" : "Method"
+      },
+      {
+        "desc" : "Reset the space rotation index to a specific value",
+        "doc" : "Reset the space rotation index to a specific value\n\nParameters:\n * index - Optional number representing the space index to reset to (1-based), defaults to 1",
+        "name" : "resetSpaceIndex",
+        "signature" : "BingDaily:resetSpaceIndex(index)",
+        "parameters" : [
+          " * index - Optional number representing the space index to reset to (1-based), defaults to 1"
+        ],
+        "type" : "Method"
+      }
     ],
     "Field" : [
-
+      {
+        "desc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7})",
+        "doc" : "Array of desktop space IDs to rotate through (default: {1, 2, 4, 5, 6, 7}).",
+        "fieldtype" : "Field",
+        "name" : "desktop_spaces",
+        "signature" : "BingDaily.desktop_spaces",
+        "type" : "Variable"
+      },
+      {
+        "desc" : "Current index in the rotation sequence (1-based)",
+        "doc" : "Current index in the rotation sequence (1-based).",
+        "fieldtype" : "Field",
+        "name" : "current_space_index",
+        "signature" : "BingDaily.current_space_index",
+        "type" : "Variable"
+      }
     ],
     "name" : "BingDaily"
   }
